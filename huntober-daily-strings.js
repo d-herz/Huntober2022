@@ -175,14 +175,12 @@ function punSubs (subStr){
   })
   console.log(sumCharCodesFilt) //16 left
 
-
   let middleCharFilt = sumCharCodesFilt.filter( (x,i) => {
     return ( x.length % 2 === 0 ? x.charAt((x.length)/2 + 1) !== 'e' : x.charAt( Math.ceil(x.length/2)) !== 'e' )
   })
   console.log(middleCharFilt) //14 remain
 
   //check must have even number of lowercase letters
-
   let lowerCaseCount = middleCharFilt.filter( (x) => {
     let count = 0;
     x.match(/[a-z]/) ? count +=1 : count += 0
