@@ -182,9 +182,13 @@ function punSubs (subStr){
   console.log(middleCharFilt) //14 remain
 
   //check must have even number of lowercase letters
+
   let lowerCaseCount = middleCharFilt.filter( (x) => {
-    x.split(',')
+    let count = 0;
+    x.match(/[a-z]/) ? count +=1 : count += 0
+    return count % 2 == 0 
   })
+  console.log(lowerCaseCount)
 
   //check must have at least 2 capital letters
 
