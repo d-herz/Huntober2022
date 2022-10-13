@@ -15,6 +15,14 @@ P: function domainName(url){
 }
 */
 
+//Leon's sol
+function domainName(url){
+
+  return url.replace('https://', '').replace('http://', '').replace('www.','').split('.')[0]
+  
+ }
+
+ //my solution
 function domainName(url){
   console.log(url)
   let url2
