@@ -34,7 +34,7 @@
 
 //* Using a straight reduction
 function reduceMixedArr (arr) {
-  return arr.reduce((acc,c) => +acc + +c, 0)
+  return arr.reduce((acc,c) => +acc + +c)
 }
 
 console.log(reduceMixedArr(['5', '0', 9, 3, 2, 1,'9', 6, 7]))
