@@ -8,7 +8,7 @@
 // repeats([5, 17, 18, 11, 13, 18, 11, 13]),22)
 // repeats([5, 10, 19, 13, 10, 13]),24)
 
-//Parameters, always numbers? Negative numbers? No strings, empty arrays?
+//Parameters, always numbers? Negative numbers? No strings, empty arrays? Always numbers that occur once?
 //The return should be a number, the sum of the numbers that appear singularly
 //filter/map, or maybe a charMap, or a set
 
