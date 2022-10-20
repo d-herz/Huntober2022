@@ -17,9 +17,8 @@ function repeats(arr){
   let arr2 = arr.filter( (x, i, a) => a.indexOf(x) == a.lastIndexOf(x))
   console.log(arr2)
   return arr2.reduce( (acc, c) => acc + c, 0)
-
 }
 
-console.log(repeats([4,5,7,5,4,8]))
-console.log(repeats([9, 10, 19, 13, 19, 13]))
-console.log(repeats([16, 0, 11, 4, 8, 16, 0, 11]))
+console.log(repeats([4,5,7,5,4,8])) //15
+console.log(repeats([9, 10, 19, 13, 19, 13])) //19
+console.log(repeats([16, 0, 11, 4, 8, 16, 0, 11]))  //12
