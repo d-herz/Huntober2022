@@ -8,15 +8,15 @@
 // getAverage([1,2,3,4,5,]),3);
 // getAverage([1,1,1,1,1,1,1,2]),1)
 
-//parameter: non-empty array of integers (always integers?)
-//return: the average of the array, rounded down to nearest integer
+//parameter: non-empty array of integers (always integers?, always positive/never negative?)
+//return: the average of the array, rounded down to nearest integer. It will be a whole number (no 2.5, 2.3, etc)
 // getAverage([1,2,3,4,5,]) === 3;
 
 
 // simple reduce and divide
-function getAverage(arr){
-  return Math.floor( (arr.reduce((acc,c) => acc + c , 0))/arr.length )
-}
+// function getAverage(arr){
+//   return Math.floor( (arr.reduce((acc,c) => acc + c , 0))/arr.length )
+// }
 
 
 //for loop
@@ -32,6 +32,9 @@ function getAverage(arr){
 //   avg = Math.floor( sum/arr.length)
 //   return avg
 // }
+
+//Implicit return
+const getAverage = arr => Math.floor( (arr.reduce((acc,c) => acc + c , 0))/arr.length )
 
 
 
