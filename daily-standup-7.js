@@ -10,29 +10,45 @@
 // solve([[1,2],[3,4],[5,6]]),8)
 // solve([[1,2,3],[3,4,6,6,7],[8,9,10,12,5,6]]),72)
 
-//are the arrays always filled with integers? No string integers or other funny buisnes? Will it always be 3 arrays? I noticed in the provided examples there was always 3 arrays
+//are the arrays always filled with integers? No string integers or other funny buisnes? WIll it be empty? Will it always be 3 arrays? I noticed in the provided examples there was always 3 arrays
 //return a number, that represents the amount of unique arrays possible, not using duplicats
 
-function solve(arr){
-  let product = 1
-  let arrsFilt = new Set
+//my sol
+// function solve(arr){
+//   let product = 1
+//   let arrsFilt = new Set
 
-  for (let i = 0; i < arr.length; i++) {
-    arrsFilt.add( arr[i].filter( (el, ind) => arr[i].indexOf(el) === ind) )
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     arrsFilt.add( arr[i].filter( (el, ind) => arr[i].indexOf(el) === ind) )
+//   }
   
-  arrsFilt = Array.from(arrsFilt)
+//   arrsFilt = Array.from(arrsFilt)
 
-  for (let j = 0; j < arrsFilt.length; j++) {
-    product *= arrsFilt[j].length
-  }
+//   for (let j = 0; j < arrsFilt.length; j++) {
+//     product *= arrsFilt[j].length
+//   }
   
-  return product
+//   return product
 
-}
+// }
+
+//Leon's solutions
+
+// function solve(arr) {
+//   return arr.map( subArr => [...new Set(subArr)].length).reduce( (acc, c) => acc * c, 1)
+// }
+
+const solve = arr => arr.reduce( (acc, c) => acc * new Set(c).size, 1)
 
 console.log(solve([[1,2],[4],[5,6]]))
 console.log(solve([[1,2],[4,4],[5,6,6]]))
 console.log(solve([[1,2],[3,4],[5,6]]))
 console.log(solve([[1,2,3],[3,4,6,6,7],[8,9,10,12,5,6]]))
 console.log(solve([[1,2,3],[3,5,8,9,4,6,6,7],[8,9,10,12,5,6,8,4],[1,2,3,4,5,6,7,8,9]]))
+
+//user sol's
+// const solve = a => a.map( v => new Set(v).size ).reduce( (v,w) => v*w , 1 ) ;
+
+// function solve(arr) {
+//   return arr.reduce((res, curr) => res *= new Set(curr).size, 1);
+// };
