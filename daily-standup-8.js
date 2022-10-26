@@ -13,16 +13,27 @@
 // nthSmallest({15,20,7,10,4,3} ,3) ==> return (7) 
 // nthSmallest({177,225,243,-169,-12,-5,2,92} ,5) ==> return (92) 
 
-//params will be an array and a number
+//params will be an array and a number (not empty? not a string or empty?)
 //return the element that is the nth smallest
 
-function nthSmallest(arr, n){
-  let i = n-1
-  let arr2 = arr.sort( (a, z) => a-z )
-  console.log(arr2)
-  return arr2[i]
+// function nthSmallest(arr, n){
+//   let i = n-1
+//   let arr2 = arr.sort( (a, z) => a-z )
+//   console.log(arr2)
+//   return arr2[i]
+// }
 
+//One liner g style
+// function nthSmallest(arr, n){
+//   return arr.sort( (a, z) => a-z )[n-1]
+// }
+
+//leon's solutions
+function nthSmallest(arr, n){
+  return arr.sort( (a, z) => a-z )[n-1] //this is a lexicographical sort
 }
+
+
 
 console.log(nthSmallest([3,1,2], 2))
 console.log(nthSmallest([15,20,7,10,4,3], 3))
