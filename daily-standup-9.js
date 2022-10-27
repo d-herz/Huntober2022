@@ -16,29 +16,29 @@
 3. loop a new string based on char map (but iterate length of og string)
 */
 
-// function dupEncode (text){
-//   let charMap = {}
-//   let str = ''
-//   text = text.toLowerCase()
+function dupEncode (text){
+  let charMap = {}
+  let str = ''
+  text = text.toLowerCase()
 
-//   for(char of text){
-//     if(charMap.hasOwnProperty(char)){
-//       charMap[char]++
-//     }else{
-//       charMap[char] = 1
-//     }
-//   }
-//   console.log(charMap)
+  for(char of text){
+    if(charMap.hasOwnProperty(char)){
+      charMap[char]++
+    }else{
+      charMap[char] = 1
+    }
+  }
+  console.log(charMap)
 
-//   for(let i = 0; i < text.length; i++){
-//     if(charMap[text[i]] > 1){
-//       str += ')'
-//     }else{
-//       str += '('
-//     }
-//   }
-//   return str
-// }
+  for(let i = 0; i < text.length; i++){
+    if(charMap[text[i]] > 1){
+      str += ')'
+    }else{
+      str += '('
+    }
+  }
+  return str
+}
 
 function dupEncode (text){
 
@@ -46,6 +46,8 @@ function dupEncode (text){
   return str
 
 }
+
+//leon's solution (same as my one liner basically (without the variable))
 
 
 console.log(dupEncode('din'))
