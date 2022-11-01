@@ -10,11 +10,11 @@
 // You may assume the input only contain English alphabet and spaces.
 
 
-
+//solution with no hint (my brute forcing)
 function stringTransformer(str) {
-  str = str.split(' ').join('-') //add a hyphen at each space
+  str = str.split(' ').reverse().join('-') //add a hyphen at each space
 
-  let arr = str.split(' ').reverse(); //split the string into an array, and reverse it
+  let arr = str.split(' '); //split the string into an array, and reverse it(?) 
 
   let word = arr.map( x => x.split('')); //loop through the array and split each word into an array of the letters
 
@@ -34,3 +34,6 @@ function stringTransformer(str) {
 }
 
 console.log(stringTransformer('Example Input'))
+
+
+//solution with Leon's hint: make an array, map through it making your changes to each letter, and join back into a string
