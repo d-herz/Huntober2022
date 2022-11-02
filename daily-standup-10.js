@@ -12,28 +12,28 @@
 
 //solution with no hint (my brute forcing)
 
-// function stringTransformer(str) {
-//   str = str.split(' ').reverse().join('-') //add a hyphen at each space
+function stringTransformer(str) {
+  str = str.split(' ').reverse().join('-') //add a hyphen at each space
 
-//   let arr = str.split(' '); //split the string into an array, and reverse it(?) 
+  let arr = str.split(' '); //split the string into an array, and reverse it(?) 
 
-//   let word = arr.map( x => x.split('')); //loop through the array and split each word into an array of the letters
+  let word = arr.map( x => x.split('')); //loop through the array and split each word into an array of the letters
 
-//   let newArr = []; //empty array initialized for pushing the opposite case letters into
+  let newArr = []; //empty array initialized for pushing the opposite case letters into
 
-//   for (let i = 0; i < word.length; i++) {
-//     for (let j = 0; j < word[i].length; j++) {
+  for (let i = 0; i < word.length; i++) {
+    for (let j = 0; j < word[i].length; j++) {
 
-//       if (word[i][j].toLowerCase() === word[i][j]) {
-//         newArr.push(word[i][j].toUpperCase())
-//       } else {
-//         newArr.push(word[i][j].toLowerCase())
-//       }
-//     }
-//   }
-//   // return newArr.join('').toString().replaceAll('-', ' ')
-//   return newArr.map( x => x === '-' ? ' ' : x).join('')
-// }
+      if (word[i][j].toLowerCase() === word[i][j]) {
+        newArr.push(word[i][j].toUpperCase())
+      } else {
+        newArr.push(word[i][j].toLowerCase())
+      }
+    }
+  }
+  
+  return newArr.map( x => x === '-' ? ' ' : x).join('')
+}
 
 // console.log(stringTransformer('Example Input'))
 // console.log(stringTransformer('To be OR not to be That is the Question'))
