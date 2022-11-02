@@ -9,15 +9,15 @@
 // last('take me to semynak'), ['take', 'me', 'semynak', 'to'] 
 
 //my attempt which doesn't work for keeping words with the same last letter in the same spot as original
-// function last(x){
+function last(x){
 
-//   let arr = x.split(' ').map( x => x.split('').reverse()).sort().map( x => x.reverse().join(''))
+  let arr = x.split(' ').map( x => x.split('').reverse()).sort().map( x => x.reverse().join(''))
 
-//   return arr
+  return arr
+}
 
-// }
 
-//solution with help from internet
+
 function last(x){
   return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 }
