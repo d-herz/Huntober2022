@@ -26,6 +26,24 @@ function findDeletedNumber(arr, mixArr) {
 
 }
 
+//Leon's 1st Solution: Not good time complexity (quadratic) 
+// function findDeletedNumber(arr, mixArr) {
+//   return arr.filter(x =>mixArr.indexOf(x) == -1)[0]||0
+// }
+
+//Leon's 2nd: (this would be a linear solution)
+function findDeletedNumber(arr, mixArr) {
+  if(arr.length === mixArr.length){ //check this first, in order to exit the function in constant time if this case is true ( we could let the else statement run, it would return 0 for the right case, but we use this conditional because it would be a constant time solution when the lengths are the same)
+    return 0
+  }else{
+    let arrSum = arr.reduce( (acc, c) => acc + c, 0)
+    let mixArrSum = mixArr.reduce( (acc,c) => acc + c, 0)
+    return arrSum - mixArrSum
+  }
+}
+
+
+
     
 console.log( findDeletedNumber([1,2,3,4,5], [3,4,1,5]) ) //2 'Deletion
 
