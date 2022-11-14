@@ -16,7 +16,7 @@
 
 //Parameter is an array of length 3, is that always the case? Never a string, never a different length, etc?
 
-
+//My first solution, since we know it's always '3' numbers, we don't need to worry about "time complexity", because at such small numbers, it's less of a concern
 // function gimme(arr) {
 //   let arrSort = [...arr].sort( (a, z) => a-z )
 
@@ -25,21 +25,27 @@
 // }
 
 
+// function gimme(arr) {
+//   let midIndex = 0
+//   let arrMin = Math.min(...arr)
+//   // console.log(arrMin)
+//   let arrMax = Math.max(...arr)
+//   // console.log(arrMax)
+
+//   for (let i = 0; i < arr.length; i++) {
+
+//     if (arr[i] > arrMin && arr[i] < arrMax) {
+//       midIndex = i
+//       return midIndex
+//     }
+//   }
+// }
+
+//Leon sol
 function gimme(arr) {
-  let midIndex = 0
-  let arrMin = Math.min(...arr)
-  // console.log(arrMin)
-  let arrMax = Math.max(...arr)
-  // console.log(arrMax)
-
-  for (let i = 0; i < arr.length; i++) {
-
-    if (arr[i] > arrMin && arr[i] < arrMax) {
-      midIndex = i
-      return midIndex
-    }
-  }
+  return arr.indexOf([...arr].sort((a,b) => a-b)[1])
 }
+
 
 console.log(gimme([2, 3, 1])) //0
 console.log(gimme([5, 10, 14])) //1
