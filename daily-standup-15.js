@@ -29,9 +29,6 @@ function sortArray(arr) {
 
   //map
   return arr.map(x => x % 2 === 0 ? x : oddNums.pop()) //better time complexity
-
-
-
 }
 
 
