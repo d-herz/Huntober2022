@@ -8,21 +8,30 @@
 // --> "alpha beta gamma delta alpha beta gamma delta"
 
 //My solution
-const removeConsecutiveDuplicates = s => {
 
-  let arr = s.split(' ')
-  console.log(arr)
+//params will always be a string of words? Will it ever not have strings? Will the strings have anything else or special chars? What are returning, a string? 
 
-  let arr2 = []
+// const removeConsecutiveDuplicates = s => {
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== arr[i + 1]){
-      arr2.push(arr[i])
-    }  
-  }
+//   let arr = s.split(' ')
+//   console.log(arr)
+
+//   let arr2 = []
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] !== arr[i + 1]){
+//       arr2.push(arr[i])
+//     }  
+//   }
   
-  console.log(arr2)
-  return arr2.join(' ')
+//   console.log(arr2)
+//   return arr2.join(' ')
+// }
+
+//Leon's Sol
+const removeConsecutiveDuplicates = s => { 
+  return s.split(' ').filter( (word, i, a) => word !== a[i-1]).join(' ')
+
 }
 
 
