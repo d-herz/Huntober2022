@@ -15,18 +15,25 @@
 // dup(["kelless", "keenness"]), ['keles', 'kenes'])
 
 
+// function dup(arr) {
+//   let arr2 = arr.map(x => x.split(''))
+
+//   for (let i = 0; i < arr2.length; i++) {
+
+//     arr2[i] = arr2[i].filter((x, j, a) => x !== a[j - 1])
+
+//   }
+//   return arr2.map(x => x.join(''))
+//   // console.log(arr2)
+// };
+
+//Leons
+
 function dup(arr) {
-  let arr2 = arr.map(x => x.split(''))
 
-  for (let i = 0; i < arr2.length; i++) {
-
-    arr2[i] = arr2[i].filter((x, j, a) => x !== a[j - 1])
-
-  }
-  return arr2.map(x => x.join(''))
+  return arr.map( word => word.split('').filter( (l,i,a) => l != a[i-1]).join('') )
   // console.log(arr2)
 };
-
 
 console.log(dup(["kelless", "keenness"])) //['keles','kenes']
 console.log(dup(["Woolloomooloo", "flooddoorroommoonlighters", "chuchchi"])) // ['Wolomolo','flodoromonlighters','chuchchi']
