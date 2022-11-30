@@ -1,5 +1,5 @@
 //11-30-22
-
+// https://www.codewars.com/kata/56414fdc6488ee99db00002c/train/javascript
 // Your job is to figure out the index of which vowel is missing from a given string:
 
 // A has an index of 0,
@@ -14,15 +14,26 @@
 // "John Doe hs seven red pples under his bsket"          => 0; missing: "a"
 // "Bb Smith sent us six neatly arranged range bicycles"  => 3; missing: "o"
 
+// function absentVowel(x) {
+//   let arrVowels = ['a', 'e', 'i', 'o', 'u']
+//   let strArr = x.split('')
+//   for (let i = 0; i < strArr.length; i++) {
+//     if (!strArr.includes(arrVowels[i])) {
+//       return i
+//     }
+//   }
+// }
+
+//Leon's solution
 function absentVowel(x) {
 
-  let arrVowels = ['a', 'e', 'i', 'o', 'u']
-  let strArr = x.split('')
-
-  for (let i = 0; i < strArr.length; i++) {
-    if (!strArr.includes(arrVowels[i])) {
+  //list all vowels -> loop each vowel and see 
+  let vowels = 'aeiou'
+  for (let i = 0; i < vowels.length; i++) {
+    if ( str.indexOf(vowels[i]) === -1) { //this is basically quadratic
       return i
     }
+    
   }
 
 }
