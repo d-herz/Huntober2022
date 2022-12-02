@@ -9,7 +9,8 @@
 //My sol
 function revString(str) { 
   // console.log(str.length) //sanity check
-  let newStr = '' //initialize new string
+  //initialize new string
+  let newStr = '' 
   
   //loop through original string backwards and add each letter (starting from the end) to the new string
   for (let i = str.length-1; i >= 0; i--) {
