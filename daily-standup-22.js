@@ -6,7 +6,6 @@
 
 function count(str) {
   let cache = {}
-
   if (str) {
     let arrStr = str.split('')
 
@@ -29,3 +28,4 @@ function count(str) {
 console.log(count('aba')) // { 'a': 2, 'b': 1 }
 console.log(count('')) //{}
 console.log(count())
+
