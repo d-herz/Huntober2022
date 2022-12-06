@@ -8,6 +8,8 @@
 
 // Input: jewels = "aA", stones = "aAAbbbb"
 // Output: 3
+
+
 // Example 2:
 
 // Input: jewels = "z", stones = "ZZ"
@@ -26,29 +28,45 @@
  * @param {string} stones
  * @return {number}
  */
+// var numJewelsInStones = function (jewels, stones) {
+
+//   let jewelCache = {}
+
+//   for (const char of jewels) {
+//     if (jewelCache[char]){
+//       jewelCache[char]++
+//     } else {
+//       jewelCache[char] = 1
+//     }
+//   }
+
+//   let jewelsIHave = 0
+
+//   for (const char of stones) {
+//     if (jewelCache[char]) {
+//       jewelsIHave++
+//     }
+//   }
+//   return jewelsIHave
+// };
+
+
+//Leons 
 var numJewelsInStones = function (jewels, stones) {
 
-  let jewelCache = {}
-  jewels = jewels.split('')
-  stones = stones.split('')
-
-
-  for (const char of jewels) {
-    if (jewelCache[char]){
-      jewelCache[char]++
-    } else {
-      jewelCache[char] = 1
+  const map = {}
+  let count = 0
+  
+  for (const jewel of jewels) {
+    map[jewel] = true
+  }
+  
+  for (const stone of stones) {
+    if (map[stone]) {
+      count++
     }
   }
-
-  let jewelsIHave = 0
-
-  for (const char of stones) {
-    if (jewelCache[char]) {
-      jewelsIHave++
-    }
-  }
-  return jewelsIHave
+  return count
 };
 
 
