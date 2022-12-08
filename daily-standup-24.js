@@ -13,7 +13,7 @@
 
 //Will our parameter always be a string? (Never a number, or empty, or anything weird?...)
 //Does case matter, do we count 'L' as the same as 'l'? (not sure yet)
-//We will return a single letter, then one which occurs the most? What if there isn't one? (don't really have answer at this point)
+//We will return a single letter, the one which occurs the most? What if there isn't one? (don't really have answer at this point)
 
 // My solution
 function maxChar(str) {
@@ -42,7 +42,6 @@ function maxChar(str) {
   return mostOccur
 }
 
-
 //Article solution, almost identical to mine! :D
 const max = string => {
   const characters = {};
@@ -64,10 +63,32 @@ const max = string => {
 }
 
 
+//Leon solution
+function maxCharacter(str) {
+  
+  let charMap = {}
+  let count = 0;
+  let maxChar = null;
+
+  for (const char of str) {
+    charMap[char] = charMap[char] + 1 || 1
+  }
+  
+  for (const char in charMap) {
+    if (charMap[char] > count) {
+      maxChar = char
+      count = charMap[char]
+    }
+  }
+  return maxChar
+}
+
+
+
 console.log(maxChar('Hello World')) //'l'
 console.log(maxChar('Suhhh')) //'h'
 console.log(maxChar('We Go Get')) //G or e, 
 
-console.log(max('Hello World')) //'l'
+console.log(max('Help me')) //'e'
 console.log(max('Suhhh')) //'h'
 console.log(max('We Go Get')) //G or e, 
