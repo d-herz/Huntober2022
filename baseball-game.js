@@ -13,6 +13,7 @@
 
 //Problem fro Junebee's mock interview with a google engineer
 
+//My solution
 /**
  * @param {string[]} operations
  * @return {number}
