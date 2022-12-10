@@ -11,8 +11,6 @@
 // Invalidate the previous score, removing it from the record.
 // Return the sum of all the scores on the record after applying all the operations.
 
-//Problem fro Junebee's mock interview with a google engineer
-
 //My solution
 /**
  * @param {string[]} operations
