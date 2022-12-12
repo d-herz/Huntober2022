@@ -36,7 +36,6 @@ var containsDuplicate = function (nums) {
 };
 
 //Leon
-
 function containsDupes(arr) {
   let numsMap = {}
   for (let i = 0; i < arr.length; i++) {
