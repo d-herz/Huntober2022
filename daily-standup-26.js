@@ -26,7 +26,6 @@ var majorityElement = function (nums) {
     charMap[num] = charMap[num] +1 || 1
   }
   // console.log(charMap)
-
   for (const char in charMap) {
     if (charMap[char] > n / 2) {
       return char
@@ -34,5 +33,37 @@ var majorityElement = function (nums) {
   }
 };
 
+
+//Leon
+function majorityEle (arr) {
+  // arr.sort()
+  // return arr[Math.floor(arr.length/2)] //logarithmic solution
+
+  let elem = {},
+    count = 0,
+    majElem = arr[0]
+  
+  for (const num of arr) {
+    elem[num] = elem[num] + 1 || 1;
+  }
+
+  for (const num of arr) {
+    elem[num] = elem[num] + 1 || 1;
+    // elem[num] > arr.length/2 
+  }
+
+  for (const n in elem) {
+    if (elem[n] > count) {
+      count = elem[n]
+      majElem = n
+    }
+  }
+  return majElem
+};
+
 console.log(majorityElement([3, 2, 3])) //3
 console.log(majorityElement([2, 2, 1, 1, 1, 2, 2])) //2
+
+
+console.log(majorityEle([3, 2, 3])) //3
+console.log(majorityEle([2, 2, 1, 1, 1, 2, 2])) //2
