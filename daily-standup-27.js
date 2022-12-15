@@ -1,4 +1,4 @@
-// 12/14/22
+// 12-14-22
 //https://medium.com/siliconwat/algorithms-in-javascript-b0bed68f4038
 
 // Given a magazine of words and a ransom note, determine if it’s possible to “cut out” and create the ransom note from the magazine words.
