@@ -67,15 +67,23 @@
 // };
 
 //My 3rd sol with recursion:
+// var fib = function (n) {
+//   if (n === 0 || n === 1) {
+//     return n
+//   } else {
+//     return fib(n-1) + fib(n-2)
+//   }
+// };
+
+//Leon's Solution:
 var fib = function (n) {
-  if (n === 0 || n === 1) {
-    return n
-  } else {
-    return fib(n-1) + fib(n-2)
+  let arr = [0, 1]
+  
+  for (let i = 2; i <= n; i++) {
+      arr[i] = arr[i-1] + arr[i-2]
   }
+  return arr[n]
 };
-
-
 
 
 console.log(fib(0)) // 0
