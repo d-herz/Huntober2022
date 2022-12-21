@@ -29,24 +29,52 @@
 
 // F(n) = F(n-1) + F(n-2) for n > 1
 
-//My 1st solution:
-var fib = function (n) {
-  let cache = {}
-  let i = 0;
+//My 1st solution using a do-while:
+// var fib = function (n) {
+//   let cache = {}
+//   let i = 0;
 
- do {
-    if (i <= 1 ) {
-      cache[i] = i
-    } else {
-      cache[i] = cache[i - 1] + cache[i - 2]
-    }
-   i++
-  } while (i < n )
+//  do {
+//     if (i <= 1 ) {
+//       cache[i] = i
+//     } else {
+//       cache[i] = cache[i - 1] + cache[i - 2]
+//     }
+//    i++
+//   } while (i < n )
   
-  let arr = Object.values(cache)
-  arr.reverse()
-  return n > 1 ? arr[0] + arr[1] : n;
+//   let arr = Object.values(cache)
+//   arr.reverse()
+//   return n > 1 ? arr[0] + arr[1] : n;
+// };
+
+//My 2nd sol with a for loop:
+// var fib = function (n) {
+//   let cache = {}
+
+//   for (let i = 0; i < n; i++) {
+//     if (i <= 1) {
+//       cache[i] = i
+//     } else {
+//       cache[i] = cache[i - 1] + cache[i - 2]
+//     }
+//   }
+//   // console.log(n, cache)
+//   let arr = Object.values(cache)
+//   arr.reverse()
+//   // console.log(arr)
+//   return n > 1 ? arr[0] + arr[1] : n;
+// };
+
+//My 3rd sol with recursion:
+var fib = function (n) {
+  if (n === 0 || n === 1) {
+    return n
+  } else {
+    return fib(n-1) + fib(n-2)
+  }
 };
+
 
 
 
@@ -56,7 +84,7 @@ console.log(fib(2)) // 1
 console.log(fib(3)) // 2
 console.log(fib(4)) // 3
 console.log(fib(5)) // 5
-console.log(fib(10)) // 
+console.log(fib(10)) // 55 
 
 
 
