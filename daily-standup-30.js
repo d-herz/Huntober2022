@@ -24,23 +24,32 @@
 // Output: 3
 // Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3
 
+// F(0) = 0, F(1) = 1
+// F(n) = F(n - 1) + F(n - 2), for n > 1.
+
 //For loop
-var fib = function (n) {
- 
-  let results = [0, 1, ];
-  
-  for (let i = 2; i <= n; i++) {
-    results[i] = results[i - 1] + results[i - 2]
-  }
-
-  return results[n]
-
-};
-
-//Recursion
 // var fib = function (n) {
+ 
+//   let results = [0, 1, ];
+  
+//   for (let i = 2; i <= n; i++) {
+//     results[i] = results[i - 1] + results[i - 2]
+//   }
+
+//   return results[n]
 
 // };
+
+
+//Recursion
+var fib = function (n) {
+ 
+  if (n < 2) {
+    return n
+  } else {
+    return (fib(n-1) + fib(n-2))
+  }
+};
 
 
 console.log(fib(0)) // 0
