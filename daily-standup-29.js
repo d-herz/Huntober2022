@@ -30,23 +30,23 @@
 // F(n) = F(n-1) + F(n-2) for n > 1
 
 //My 1st solution using a do-while:
-// var fib = function (n) {
-//   let cache = {}
-//   let i = 0;
+var fib = function (n) {
+  let cache = {}
+  let i = 0;
 
-//  do {
-//     if (i <= 1 ) {
-//       cache[i] = i
-//     } else {
-//       cache[i] = cache[i - 1] + cache[i - 2]
-//     }
-//    i++
-//   } while (i < n )
+ do {
+    if (i <= 1 ) {
+      cache[i] = i
+    } else {
+      cache[i] = cache[i - 1] + cache[i - 2]
+    }
+   i++
+  } while (i < n )
   
-//   let arr = Object.values(cache)
-//   arr.reverse()
-//   return n > 1 ? arr[0] + arr[1] : n;
-// };
+  let arr = Object.values(cache)
+  arr.reverse()
+  return n > 1 ? arr[0] + arr[1] : n;
+};
 
 //My 2nd sol with a for loop:
 // var fib = function (n) {
@@ -93,9 +93,3 @@ console.log(fib(3)) // 2
 console.log(fib(4)) // 3
 console.log(fib(5)) // 5
 console.log(fib(10)) // 55 
-
-
-
-
-
-
