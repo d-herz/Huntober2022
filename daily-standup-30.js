@@ -42,12 +42,27 @@
 
 
 //Recursion
-var fib = function (n) {
+// var fib = function (n) {
  
-  if (n < 2) {
-    return n
+//   if (n < 2) {
+//     return n
+//   } else {
+//     return (fib(n-1) + fib(n-2))
+//   }
+// };
+
+//Memoization + Recursion
+var memo = {}
+
+var fib = function (n) {
+  if (n === 0 || n === 1) {
+    return n;
+  } else if (memo[n]) {
+    return memo[n];
   } else {
-    return (fib(n-1) + fib(n-2))
+    var result = fib(n - 1) + fib(n - 2);
+    memo[n] = result;
+    return result;
   }
 };
 
