@@ -51,7 +51,7 @@
 //   }
 // };
 
-//Memoization + Recursion
+//Memoization + Recursion 
 var memo = {}
 
 var fib = function (n) {
@@ -65,7 +65,6 @@ var fib = function (n) {
     return result;
   }
 };
-
 
 console.log(fib(0)) // 0
 console.log(fib(1)) // 1
