@@ -40,7 +40,6 @@
 
 // };
 
-
 //Recursion: This complexity is O(n^2) (exponential)
 // var fib = function (n) {
  
@@ -52,7 +51,7 @@
 // };
 
 //Memoization + Recursion: This solution is O(n) (linear):
-var memo = {}
+var memo = {};
 
 var fib = function (n) {
   if (n === 0 || n === 1) {
