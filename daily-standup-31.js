@@ -11,10 +11,7 @@
 
 // You have to create the function factorial that receives n and returns n! You have to use recursion.
 
-
-
-
-
+//My 1st Solution:
 function factorial(n) {
 
   if (n === 0) {
@@ -23,6 +20,15 @@ function factorial(n) {
     return n * factorial(n-1)
   }
 
+}
+
+//Leon
+function factorial(n) {
+  if (n < 2 ) {
+    return 1
+  } else {
+    return n * factorial(n - 1)
+  }
 }
 
 
