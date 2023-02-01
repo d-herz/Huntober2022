@@ -1,4 +1,4 @@
-//1-31-23
+//1-31-23 & 2-1-23
 //https://www.codewars.com/kata/5500d54c2ebe0a8e8a0003fd/
 
 // Find the greatest common divisor of two positive integers.The integers can be large, so you need to find a clever solution.
@@ -26,17 +26,25 @@
 //   console.log( divisorsY.sort() )
 // }
 
-function mygcd(x, y) {
+//Non-Recursive
+// function mygcd(x, y) {
 
-  let smallerNumber = x < y ? x : y
+//   let smallerNumber = x < y ? x : y
 
-  for (let i = smallerNumber; i > 0 ; i--) {
-    if (x % i === 0 && y % i === 0) {
-      return i 
-    }
+//   for (let i = smallerNumber; i > 0 ; i--) {
+//     if (x % i === 0 && y % i === 0) {
+//       return i 
+//     }
+//   }
+// }
+
+//Recursive with Euclidian Algorithm
+function mygcd(a, b) {
+  if (b === 0 ) {
+    return a
   }
+  return mygcd( b, a % b)
 }
-
 
 
 console.log(mygcd( 30,12))//6
