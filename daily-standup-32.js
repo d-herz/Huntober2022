@@ -39,6 +39,7 @@
 // }
 
 //Recursive with Euclidian Algorithm
+// a = b * q + r 
 function mygcd(a, b) {
   if (b === 0 ) {
     return a

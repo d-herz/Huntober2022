@@ -1,7 +1,7 @@
-//1-18-23
+//1-18-23, 1-19-23
 //https://www.codewars.com/kata/5694cb0ec554589633000036
 
-// In mathematics, the factorial of a non - negative integer n, denoted by n!, is the product of all positive integers less than or equal to n.For example,
+// In mathematics, the factorial of a non - negative integer n, denoted by n!, is the product of all positive integers less than or equal to n. For example,
 
 // 5! = 5 * 4 * 3 * 2 * 1 = 120.
 
