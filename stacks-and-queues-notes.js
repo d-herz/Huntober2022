@@ -64,6 +64,7 @@ queue.push('dolphin')
 queue.push('whale shark')
 
 //dequeue: .shift() removes & returns item from front of array
+//Shift is less optimized due to linear complexity (class/object shown below is better approach)
 queue.shift('') //"seahorse"
 queue.shift('') //"dolphin"
 
@@ -88,6 +89,11 @@ class Queue{
     delete this.storage[this.head]
     this.head++
     return removed
+  }
+
+  size() {
+    let size = this.tail - this.head
+    return size > 0 ? size : 0
   }
 }
 
