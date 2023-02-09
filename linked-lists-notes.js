@@ -1,3 +1,6 @@
+// https://www.youtube.com/watch?v=ChWWEncl76Y
+//Doubly linked list
+
 class LinkedList {
   constructor() {
     this.head = this.tail = null
@@ -43,6 +46,7 @@ class LinkedList {
         this.head = this.head.next
         this.head.prev = null
       }
+
       return removedHead.value
     }
   }
@@ -53,6 +57,7 @@ class LinkedList {
       return null
     } else {
       let removedTail = this.tail
+
       //if 1 node left
       if (this.head === this.tail) {
         this.head = this.tail = null
@@ -60,6 +65,7 @@ class LinkedList {
         this.tail = this.tail.prev
         this.tail.next = null
       }
+
       return removedTail.value
     }
   }
