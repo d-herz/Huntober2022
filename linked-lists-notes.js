@@ -102,7 +102,6 @@ list.prepend(0)
 list.prepend(-1)
 // console.log(list)
 
-
 list.search(1)
 list.search(3)
 list.search(999) //null
