@@ -107,7 +107,6 @@ queue2.dequeue()// "seahorse"
 queue2.dequeue()// "dolphin"
 
 
-
 //Leon's Queue class constructor
 // class Queue {
 //   constructor() {
