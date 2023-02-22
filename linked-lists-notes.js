@@ -46,7 +46,6 @@ class LinkedList {
         this.head = this.head.next
         this.head.prev = null
       }
-
       return removedHead.value
     }
   }
