@@ -18,8 +18,17 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var middleNode = function (head) {
 
+
+var middleNode = function (head) {
+  // Loop through the list until .next is no longer true (which would be at the tail)
+  // The fast and slow algorithm
+  slow = fast = head;
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  return slow;
 };
 
 console.log( middleNode() )
