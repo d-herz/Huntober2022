@@ -31,7 +31,3 @@ var middleNode = function (head) {
   return slow;
 };
 
-console.log( middleNode() )
-console.log( middleNode() )
-console.log( middleNode() )
-console.log( middleNode() )
