@@ -1,6 +1,6 @@
 // https://www.youtube.com/watch?v=ChWWEncl76Y
-//Doubly linked list
 
+//Doubly linked list
 class LinkedList {
   constructor() {
     this.head = this.tail = null
