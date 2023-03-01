@@ -73,3 +73,8 @@ var reverseList = function (head) {
 }
 
 
+//Alternative solution using modern JS syntax:
+var reverseList = (head, prev = null) => {
+  while (head) [head.next, prev, head] = [prev, head, head.next];
+  return prev;
+}
