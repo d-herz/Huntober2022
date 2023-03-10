@@ -140,7 +140,7 @@ class BST {
     return result;
   }
 
-  // breadth first search: level by levelt
+  // breadth first search: level by level
   // 
   bfs() {
     let result = [];
