@@ -11,7 +11,7 @@ class Node {
 class BST {
   constructor(value) {
     this.root = new Node(value)
-    this.count = 0
+    this.count = 1;
   }
 
   size() {
@@ -160,3 +160,4 @@ class BST {
     return result
   }
 }
+
