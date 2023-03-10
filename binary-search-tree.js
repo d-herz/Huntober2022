@@ -151,7 +151,7 @@ class BST {
     while (queue.length) {
       let currentNode = queue.shift()
 
-      result.push(currentNode)
+      result.push(currentNode.value)
 
       if (currentNode.left) {
         queue.push(currentNode.left)
