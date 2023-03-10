@@ -101,7 +101,9 @@ class BST {
       // if right child exists, go right again
       if (node.right) traverse(node.right)
     }
-    return result
+
+    traverse(this.root);
+    return result;
   }
 
   // pre-order
@@ -117,7 +119,8 @@ class BST {
       // if right child exists, go right again
       if (node.right) traverse(node.right)
     }
-    return result
+    traverse(this.root);
+    return result;
   }
 
   // post-order
@@ -133,7 +136,8 @@ class BST {
       // capture root node value
       result.push(node.value)
     }
-    return result
+    traverse(this.root);
+    return result;
   }
 
   // breadth first search: level by levelt
