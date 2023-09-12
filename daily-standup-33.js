@@ -29,23 +29,30 @@
 
 // As long as the tests pass, go for it!
 
-var Queue = function () {
-  // implement your Queue constructor here
-};
+//Solution:
+class Queue {
+  constructor() {
+    this.storage = {}
+    this.head = 0
+    this.tail = 0
+  }
 
-Queue.prototype.enqueue = function (item) {
-  // add item to the queue
-};
+  //enqueue: adding through the back/tail
+  enqueue(element) {
+    this.storage[this.tail] = element
+    this.tail++
+  }
 
-Queue.prototype.dequeue = function () {
-  // remove item from the front of the queue and return its value
-};
+  //dequeue: return/remove element from front/head 
+  dequeue() {
+    let removed = this.storage[this.head]
+    delete this.storage[this.head]
+    this.head++
+    return removed
+  }
 
-Queue.prototype.size = function () {
-  // return number of items in queue so far
-};
-
-
-
-
-
+  size() {
+    let size = this.tail - this.head;
+    return size > 0 ? size : 0
+  }
+}
